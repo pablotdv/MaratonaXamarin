@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9464869C-F6AB-4A35-BD79-BC4D7EC201BA}</ProjectGuid>
+    <ProjectGuid>{F5D9A889-F9F8-477A-9D45-C475630C95D1}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -126,7 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HelloXamarinForms\HelloXamarinForms.csproj">
-      <Project>{68492401-2317-4ee7-805f-3bde1c47bc2e}</Project>
+      <Project>{a4138df9-2034-4648-8369-882fa61ca56e}</Project>
       <Name>HelloXamarinForms</Name>
     </ProjectReference>
   </ItemGroup>

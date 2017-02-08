@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2B9ED087-7F63-46EE-865A-DE25DC807B0A}</ProjectGuid>
+    <ProjectGuid>{31C59C84-9DFF-4168-AD6B-E253E33B55E3}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HelloXamarinForms.WinPhone</RootNamespace>
@@ -114,7 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HelloXamarinForms\HelloXamarinForms.csproj">
-      <Project>{68492401-2317-4ee7-805f-3bde1c47bc2e}</Project>
+      <Project>{a4138df9-2034-4648-8369-882fa61ca56e}</Project>
       <Name>HelloXamarinForms</Name>
     </ProjectReference>
   </ItemGroup>

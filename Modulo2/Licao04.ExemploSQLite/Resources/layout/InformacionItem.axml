@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minHeight="50dp">
+
+  <TextView android:id="@+id/txvIngresosMexico"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"/>
+
+  <TextView android:id="@+id/txvEgresosMexico"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"/>
+
+  <TextView android:id="@+id/txvCapitalMexico"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"/>
+
+
+  <TextView android:id="@+id/txvIngresosColombia"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"/>
+
+  <TextView android:id="@+id/txvEgresosColombia"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"/>
+
+  <TextView android:id="@+id/txvCapitalColombia"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"/>
+  
+  
+  
+</LinearLayout>

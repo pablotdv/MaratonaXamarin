@@ -3,72 +3,72 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:layout_weight="1">
-    <TextView
-        android:text="red"
-        android:background="#aa0000"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1" />
-    <TextView
-        android:text="green"
-        android:background="#00aa00"
-        android:layout_width="wrap_content"
+        android:layout_weight="1">
+        <TextView
+            android:text="red"
+            android:background="#aa0000"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        <TextView
+            android:text="green"
+            android:background="#00aa00"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        <TextView
+            android:text="blue"
+            android:background="#0000aa"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1" />
-    <TextView
-        android:text="blue"
-        android:background="#0000aa"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" />
-  </LinearLayout>
-  <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:layout_weight="1">
-    <TextView
-        android:text="Hola 1"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" />
-    <TextView
-        android:text="Hola 2"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" />
-    <Button
-        android:text="Click"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" />
-    <RadioGroup
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioGroup1">
-      <RadioButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:checked="true"
-          android:text="RadioButton"
-          android:id="@+id/radioButton1" />
-      <RadioButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="RadioButton"
-          android:id="@+id/radioButton2" />
-      <RadioButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="RadioButton"
-          android:id="@+id/radioButton3" />
-    </RadioGroup>
-  </LinearLayout>
+        android:layout_weight="1">
+        <TextView
+            android:text="Hola 1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        <TextView
+            android:text="Hola 2"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        <Button
+            android:text="Click"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+        <RadioGroup
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup1">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="RadioButton"
+                android:id="@+id/radioButton1" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                android:id="@+id/radioButton2" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                android:id="@+id/radioButton3" />
+        </RadioGroup>
+    </LinearLayout>
 </LinearLayout>

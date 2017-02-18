@@ -90,9 +90,6 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
-    <InterfaceDefinition Include="LaunchScreen.storyboard">
-      <SubType>Designer</SubType>
-    </InterfaceDefinition>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

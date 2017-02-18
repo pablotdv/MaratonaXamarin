@@ -144,6 +144,12 @@
                                     <color key="titleColor" red="1" green="0.30100786559999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="5" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="252" y="118" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.16223300362893034" green="0.254985222381934" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -156,6 +162,7 @@
                         <outlet property="txtPagoaCredito" destination="rsm-AN-OjA" id="3YJ-ZW-FRO"/>
                         <outlet property="txtPagoaProveedores" destination="W5h-9D-YH3" id="w50-eS-slZ"/>
                         <outlet property="txtRenta" destination="rqT-pD-R5A" id="ywi-Xl-1ad"/>
+                        <outlet property="txtTeste" destination="5" id="name-outlet-5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

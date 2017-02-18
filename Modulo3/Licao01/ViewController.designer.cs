@@ -45,6 +45,10 @@ namespace Licao01
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtRenta { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtTeste { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (btnCalcular != null) {
@@ -85,6 +89,11 @@ namespace Licao01
             if (txtRenta != null) {
                 txtRenta.Dispose ();
                 txtRenta = null;
+            }
+
+            if (txtTeste != null) {
+                txtTeste.Dispose ();
+                txtTeste = null;
             }
         }
     }

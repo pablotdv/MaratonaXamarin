@@ -21,7 +21,7 @@ namespace Licao01
             btnCalcular.TouchUpInside += delegate
             {
                 try
-                {
+                {                    
                     Caja = double.Parse(txtCaja.Text);
                     Banco = double.Parse(txtBanco.Text);
                     CuentasporCobrar = double.Parse(txtCuentasporCobrar.Text);

@@ -12,7 +12,7 @@ namespace Licao03
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-             SetContentView (Resource.Layout.LinearLayout);
+             SetContentView (Resource.Layout.TableLayout);
         }
     }
 }

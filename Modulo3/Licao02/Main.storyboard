@@ -24,7 +24,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue id="241" destination="12" kind="presentation" modalTransitionStyle="flipHorizontal"/>
+                                    <segue id="241" destination="12" kind="presentation" modalTransitionStyle="crossDissolve"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="433" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
@@ -35,7 +35,7 @@
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.52549019607843139" blue="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <segue id="558" destination="19" kind="presentation" modalTransitionStyle="flipHorizontal"/>
+                                    <segue id="558" destination="19" kind="presentation" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,7 +64,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue id="352" destination="5" kind="presentation" modalTransitionStyle="flipHorizontal"/>
+                                    <segue id="352" destination="5" kind="presentation" modalTransitionStyle="coverVertical"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,7 +94,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue id="431" destination="5" kind="presentation" modalTransitionStyle="flipHorizontal"/>
+                                    <segue id="431" destination="5" kind="presentation" modalTransitionStyle="flipHorizontal" modalPresentationStyle="currentContext"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Licao02", "Licao02\Licao02.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Licao03.Eventos", "Licao03.Eventos\Licao03.Eventos.csproj", "{DA8E0F16-26ED-463A-B220-EC82E57D7BC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Licao03.Delegates", "Licao03.Delegates\Licao03.Delegates.csproj", "{D79B01F9-9B87-4E15-9E82-241E942690DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -69,6 +71,22 @@ Global
 		{DA8E0F16-26ED-463A-B220-EC82E57D7BC3}.Release|iPhone.Build.0 = Release|iPhone
 		{DA8E0F16-26ED-463A-B220-EC82E57D7BC3}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{DA8E0F16-26ED-463A-B220-EC82E57D7BC3}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Debug|iPhone.Build.0 = Debug|iPhone
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Release|iPhone.ActiveCfg = Release|iPhone
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Release|iPhone.Build.0 = Release|iPhone
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,7 +27,7 @@ namespace Licao03.Eventos
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField txtUsuario { get; set; }
+        UIKit.UITextField txtUser { get; set; }
 
         [Action ("ValueChanged:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -50,9 +50,9 @@ namespace Licao03.Eventos
                 txtPassword = null;
             }
 
-            if (txtUsuario != null) {
-                txtUsuario.Dispose ();
-                txtUsuario = null;
+            if (txtUser != null) {
+                txtUser.Dispose ();
+                txtUser = null;
             }
         }
     }

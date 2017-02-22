@@ -1,62 +1,116 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <scene sceneID="4">
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="5" sceneMemberID="viewController" customClass="ViewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2"/>
-                        <viewControllerLayoutGuide type="bottom" id="3"/>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="243" y="332" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-Ac-vcx">
+                                <rect key="frame" x="224" y="285" width="152" height="30"/>
                                 <state key="normal" title="Iniciar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="10" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Usuário">
-                                <rect key="frame" x="206" y="146" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                                <rect key="frame" x="112" y="194" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="ValueChanged:" destination="5" id="17" eventType="valueChanged"/>
+                                    <action selector="ValueChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="68"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="11" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Senha" enabled="NO">
-                                <rect key="frame" x="206" y="197" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20">
+                                <rect key="frame" x="112" y="248" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="12" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Código" enabled="NO">
-                                <rect key="frame" x="206" y="246" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Código" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="28">
+                                <rect key="frame" x="112" y="309" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="20" firstAttribute="top" secondItem="3" secondAttribute="bottom" constant="24" id="35"/>
+                            <constraint firstItem="28" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="31" id="36"/>
+                            <constraint firstItem="oBE-Ac-vcx" firstAttribute="top" secondItem="28" secondAttribute="bottom" constant="58" id="37"/>
+                            <constraint firstItem="3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="174" id="40"/>
+                            <constraint firstItem="3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="112" id="41"/>
+                            <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" constant="112" id="42"/>
+                            <constraint firstItem="20" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="112" id="45"/>
+                            <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="112" id="46"/>
+                            <constraint firstAttribute="trailing" secondItem="28" secondAttribute="trailing" constant="112" id="47"/>
+                            <constraint firstItem="oBE-Ac-vcx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="112" id="48"/>
+                            <constraint firstAttribute="trailing" secondItem="oBE-Ac-vcx" secondAttribute="trailing" constant="112" id="49"/>
+                            <constraint firstItem="28" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="112" id="52"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3"/>
+                                <exclude reference="20"/>
+                                <exclude reference="28"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="40"/>
+                                <exclude reference="41"/>
+                                <exclude reference="42"/>
+                                <exclude reference="35"/>
+                                <exclude reference="45"/>
+                                <exclude reference="46"/>
+                                <exclude reference="36"/>
+                                <exclude reference="47"/>
+                                <exclude reference="52"/>
+                                <exclude reference="37"/>
+                                <exclude reference="48"/>
+                                <exclude reference="49"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="3"/>
+                                <include reference="20"/>
+                                <include reference="28"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="40"/>
+                                <include reference="41"/>
+                                <include reference="42"/>
+                                <include reference="35"/>
+                                <include reference="45"/>
+                                <include reference="46"/>
+                                <include reference="36"/>
+                                <include reference="47"/>
+                                <include reference="52"/>
+                                <include reference="37"/>
+                                <include reference="48"/>
+                                <include reference="49"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="txtUsuario" destination="10" id="name-outlet-10"/>
-                        <outlet property="txtPassword" destination="11" id="name-outlet-11"/>
-                        <outlet property="txtCode" destination="12" id="name-outlet-12"/>
-                        <outlet property="btnStart" destination="9" id="name-outlet-9"/>
+                        <outlet property="btnStart" destination="oBE-Ac-vcx" id="name-outlet-oBE-Ac-vcx"/>
+                        <outlet property="txtCode" destination="28" id="name-outlet-28"/>
+                        <outlet property="txtPassword" destination="20" id="name-outlet-20"/>
+                        <outlet property="txtUser" destination="3" id="name-outlet-3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="-319"/>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
 </document>

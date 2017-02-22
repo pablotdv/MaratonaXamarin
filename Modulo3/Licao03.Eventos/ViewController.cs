@@ -7,46 +7,51 @@ namespace Licao03.Eventos
 {
     public partial class ViewController : UIViewController
     {
+        int count = 1;
+
         public ViewController(IntPtr handle) : base(handle)
         {
-        }       
+        }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
+            // Perform any additional setup after loading the view, typically from a nib.
             btnStart.AccessibilityIdentifier = "myButton";
             btnStart.TouchUpInside += BtnStart_TouchUpInside;
-            txtUsuario.Delegate = new UITextFieldUserValidationDelegate();
-            txtPassword.WeakDelegate = this;            
-        }
-
-        
-        public override void DidReceiveMemoryWarning()
-        {
-            base.DidReceiveMemoryWarning();
+            txtUser.Delegate = new UITextFieldUserValidationDelegate();
+            txtPassword.WeakDelegate = this;
         }
 
         partial void ValueChanged(UITextField sender)
         {
-            if (!string.IsNullOrEmpty(txtUsuario.Text))
+            if (!string.IsNullOrEmpty(txtUser.Text))
                 txtPassword.Enabled = true;
         }
 
-        private void BtnStart_TouchUpInside(object sender, EventArgs e)
+        public override void DidReceiveMemoryWarning()
         {
-            if (!string.IsNullOrWhiteSpace(txtUsuario.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text))
+            base.DidReceiveMemoryWarning();
+            // Release any cached data, images, etc that aren't in use.		
+        }
+
+        void BtnStart_TouchUpInside(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtUser.Text) && !string.IsNullOrEmpty(txtPassword.Text))
             {
                 txtCode.Enabled = true;
                 btnStart.TouchUpInside -= BtnStart_TouchUpInside;
                 btnStart.TouchUpInside += (sen, eve) => this.ShowPopup("Hola", "Alerta");
+
             }
+
         }
 
         [Export("textField:shouldChangeCharactersInRange:replacementString:")]
         public bool ShouldChangeCharacters(UITextField textField, Foundation.NSRange range, string replacementString)
         {
             return Validations.ValidateInput(replacementString, Validations.ValidationType.Password);
-        }
+        }        
     }
 }

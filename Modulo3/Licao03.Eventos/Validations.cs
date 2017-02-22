@@ -21,7 +21,7 @@ namespace Licao03.Eventos
 
         public static bool ValidateInput(string text, ValidationType validationType)
         {
-            var validUserChars = "abcdefghijklmnoqrstuvwxyz123456789_";
+            var validUserChars = "abcdefghijklmnopqrstuvwxyz123456789_";
             var validPasswordChars = "abcdefghijklmnoqrstuvwxyz123456789*!$%&/()?¿!¡";
             var validCodeChars = "123456789";
             bool result = false;

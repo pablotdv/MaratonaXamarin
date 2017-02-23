@@ -1,6 +1,7 @@
 using System;
 using SQLite;
 using UIKit;
+using System.IO;
 
 namespace Licao05
 {
@@ -13,10 +14,10 @@ namespace Licao05
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
             var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            path = System.IO.Path.Combine(path, "Base.db3");
+            path = Path.Combine(path, "Base.db3");
             var conn = new SQLiteConnection(path);
+            conn.CreateTable<Informacion>();
             btnGuardar.TouchUpInside += delegate
             {
                 try
@@ -46,7 +47,7 @@ namespace Licao05
                         Visor.Add((fila.IngresosMexico.ToString()));
                         Visor.Add((fila.IngresosColombia.ToString()));
                         Visor.Add((fila.EgresosMexico.ToString()));
-                        Visor.Add((fila.EgresosColombia.ToString()));                
+                        Visor.Add((fila.EgresosColombia.ToString()));
                     }
                     Visor.Title = "Informacion de SQLite";
                     Visor.Style = UIActionSheetStyle.BlackOpaque;

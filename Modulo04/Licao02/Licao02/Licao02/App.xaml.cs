@@ -13,7 +13,7 @@ namespace Licao02
         {
             InitializeComponent();
 
-            MainPage = new Licao02.MainPage();
+            MainPage = new NavigationPage(new View.MainPage());
         }
 
         protected override void OnStart()

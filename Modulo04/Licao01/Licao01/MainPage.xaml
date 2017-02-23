@@ -4,8 +4,29 @@
              xmlns:local="clr-namespace:Licao01"
              x:Class="Licao01.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArgument="Thickness"
+                    Android="0,0,0,0"
+                    iOS="0,20,0,0"
+                    WinPhone="0,0,0,0"/>
+    </ContentPage.Padding>
+    <ScrollView>
+        <StackLayout Orientation="Vertical"
+                     Padding="5,0,0,0">
+            <Switch />
+            <Entry />
+            <Button Text="Button" Command="{Binding Path=MessageCommand}" />
+
+            <Label Text="Date:"/>
+
+            <SearchBar Text="Search bar"/>
+
+            <Slider x:Name="SliderControl" Value="10" />
+
+            <Label Text="Progress indicator:"/>
+            <ProgressBar Progress="{Binding Source={x:Reference Name=SliderControl}, Path=Value}" />
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>

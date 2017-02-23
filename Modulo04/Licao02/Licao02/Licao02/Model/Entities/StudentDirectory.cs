@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Licao02.Model.Entities
 {
-    public class StudentDirectory
+    public class StudentDirectory : ObservableBaseObject
     {
         private ObservableCollection<Student> students = new ObservableCollection<Student>();
-        public ObservableCollection<Student> Students { get { return students; } set { students = value; } }
+        public ObservableCollection<Student> Students { get { return students; } set { students = value; OnPropertyChange(); } }
     }
 }

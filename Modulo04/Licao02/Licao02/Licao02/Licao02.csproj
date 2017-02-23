@@ -50,6 +50,7 @@
     <Compile Include="View\SelectedStudentDetailPage.xaml.cs">
       <DependentUpon>SelectedStudentDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ValueConverters\AverageToColorConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\MainPage.xaml">

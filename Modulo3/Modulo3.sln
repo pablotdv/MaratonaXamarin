@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Licao03.Eventos", "Licao03.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Licao03.Delegates", "Licao03.Delegates\Licao03.Delegates.csproj", "{D79B01F9-9B87-4E15-9E82-241E942690DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Licao04", "Licao04\Licao04.csproj", "{FFF9CF08-DB72-4594-A62C-7ADBC506164E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -87,6 +89,22 @@ Global
 		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Release|iPhone.Build.0 = Release|iPhone
 		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{D79B01F9-9B87-4E15-9E82-241E942690DF}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Debug|iPhone.Build.0 = Debug|iPhone
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Release|iPhone.ActiveCfg = Release|iPhone
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Release|iPhone.Build.0 = Release|iPhone
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{FFF9CF08-DB72-4594-A62C-7ADBC506164E}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

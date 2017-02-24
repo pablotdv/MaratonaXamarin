@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using HockeyApp.Android;
+using HockeyApp.Android.Utils;
 
 namespace RestfulCountries.Droid
 {
@@ -14,6 +16,18 @@ namespace RestfulCountries.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+
+            AndroidEnvironment.UnhandledExceptionRaiser += (sender, args) =>
+            {
+                // Use the trace writer to log exceptions so HockeyApp finds them
+                HockeyApp.MetricsManager.TrackEvent("Caught exception -" + args.Exception);
+                args.Handled = true;
+            };
+
+            //CrashManager.Register(this, App.Keys.ANALYTICS);
+            HockeyLog.LogLevel = 4; // Info, show informative or higher log messages
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -24,4 +38,3 @@ namespace RestfulCountries.Droid
         }
     }
 }
-

@@ -13,7 +13,7 @@ namespace RestfulCountries
         {
             InitializeComponent();
 
-            MainPage = new RestfulCountries.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

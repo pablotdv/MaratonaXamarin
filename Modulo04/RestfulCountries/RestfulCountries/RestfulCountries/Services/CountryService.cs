@@ -9,7 +9,7 @@ namespace RestfulCountries.Services
 {
     public class CountryService : PlainRestClient
     {
-        protected const string FLAG_SERVICE = "http://www.geognos.com/api/en/countries/flag";
+        protected const string FLAG_SERVICE = "http://www.geognos.com/api/en/countries/flag/";
 
         public CountryService() : base("https://restcountries.eu/rest/v1/all") { }
 
@@ -20,7 +20,8 @@ namespace RestfulCountries.Services
 
         public Uri GetFlagSource(string alpha2Code)
         {
-            return new Uri(FromUrl(FLAG_SERVICE, alpha2Code + ".png"));
+            var uri = new Uri(FromUrl(FLAG_SERVICE, alpha2Code + ".png"));
+            return uri;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Licao02.Storage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Licao02.Model.Entities
 {
-    public class Student : ObservableBaseObject
+    public class Student : ObservableBaseObject, IKeyObject
     {
         private string name;
 
@@ -46,6 +47,11 @@ namespace Licao02.Model.Entities
         {
             get { return average; }
             set { average = value; OnPropertyChange(); }
+        }
+
+        public string Key
+        {
+            get;set;
         }
     }
 }

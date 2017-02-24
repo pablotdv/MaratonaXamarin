@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RestfulCountries"
+             x:Class="RestfulCountries.MainPage"
+             x:Name="RootPage"
+		     Title="All countries">
+
+    <Page.ToolbarItems>
+        <ToolbarItem x:Name="CallButton"
+				     Command="{Binding CallCommand, Source={x:Reference RootPage}}" 
+			         Text="Refresh" />
+        <ToolbarItem Command="{Binding StatusCommand, Source={x:Reference RootPage}}"
+					 Order="Secondary"
+			         Text="Status" />
+        <ToolbarItem Command="{Binding SearchCommand, Source={x:Reference RootPage}}"
+					 Order="Secondary"
+			         Text="Search" />
+    </Page.ToolbarItems>
+    <Grid>
+        <ActivityIndicator x:Name="Indicator" 
+			               IsRunning="{Binding IsBusy, Source={x:Reference RootPage}}" 
+			               />
+        <ScrollView x:Name="StatusPanel"
+				    VerticalOptions="FillAndExpand"
+				    IsVisible="false"
+				    Padding="10">
+            <Label x:Name="Response"
+				   Text="[Response here]"			 
+				   />
+        </ScrollView>
+        <ListView x:Name="List" ItemsSource="{Binding Countries, Source={x:Reference RootPage}}"
+				  IsPullToRefreshEnabled="True"
+				  IsRefreshing="{Binding IsBusy, Source={x:Reference RootPage}}"
+				  VerticalOptions="FillAndExpand"
+				  RefreshCommand="{Binding CallCommand, Source={x:Reference RootPage}}"
+				  CachingStrategy="RecycleElement"
+				  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:CountryCell />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>

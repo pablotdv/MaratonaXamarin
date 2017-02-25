@@ -13,7 +13,7 @@ namespace Licao04
         {
             InitializeComponent();
 
-            MainPage = new Licao04.MainPage();
+            MainPage = new View.DemoAzureOfflineSyncPage();
         }
 
         protected override void OnStart()

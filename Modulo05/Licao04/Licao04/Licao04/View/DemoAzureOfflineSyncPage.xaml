@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemoAzureOfflineSync.ViewModel"
+             x:Class="Licao04.View.DemoAzureOfflineSyncPage">
+    <Button Text="Agregar Contactos"
+            Command="{Binding GenerateContactsCommand}"/>
+    <Button Text="Limpar Contactos locales"
+            Command="{Binding CleanLocalDataCommand}"/>
+    <ListView ItemsSource="{Binding Contacts}"
+              IsRefreshing="{Binding IsBusy}"
+              IsPullToRefreshEnabled="True"
+              RefreshCommand="{Binding RefreshCcommand}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}"
+                          Detail="{Binding Id}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

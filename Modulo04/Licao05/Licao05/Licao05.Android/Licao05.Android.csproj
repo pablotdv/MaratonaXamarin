@@ -5,19 +5,19 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{867F9DF1-7806-4E6C-B578-F1B601E9388D}</ProjectGuid>
+    <ProjectGuid>{E708B84D-3643-4BAD-B163-B0D8E97D0FFA}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RestfulCountries.Droid</RootNamespace>
-    <AssemblyName>RestfulCountries.Android</AssemblyName>
+    <RootNamespace>Licao05.Droid</RootNamespace>
+    <AssemblyName>Licao05.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
     <JavaMaximumHeapSize />
@@ -134,9 +134,9 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RestfulCountries\RestfulCountries.csproj">
-      <Project>{df143396-7f32-4711-a52f-9b5cb29d7e70}</Project>
-      <Name>RestfulCountries</Name>
+    <ProjectReference Include="..\Licao05\Licao05.csproj">
+      <Project>{054a51c9-8a29-43c9-b2a9-cd885edb8fee}</Project>
+      <Name>Licao05</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

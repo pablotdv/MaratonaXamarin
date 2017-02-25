@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Licao05"
+             x:Class="Licao05.MainPage"
+             x:Name="RootPage">
+
+    <StackLayout Orientation="Vertical"
+                 BindingContext="{Binding Source={x:Reference RootPage}}">
+        <ListView ItemsSource="{Binding Countries}"
+                  IsRefreshing="{Binding IsBusy}"
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}">            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}"
+                              Detail="{Binding Region}"/>                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+    </StackLayout>
+
+</ContentPage>

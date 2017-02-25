@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab05.Views.CatsPage"
+             xmlns:VM="clr-namespace:Lab05.ViewModels"
+             Title="Cats">
+    <ContentPage.BindingContext>
+        <VM:CatsViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Spacing="0">
+        <Button Text="Sincronizar" Command="{Binding GetCatsCommand}" />
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
+        <ListView x:Name="ListViewCats" ItemsSource="{Binding Cats}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}"
+                               Detail="{Binding Price, StringFormat='{0:c} dólares'}"                               ImageSource="{Binding Image}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

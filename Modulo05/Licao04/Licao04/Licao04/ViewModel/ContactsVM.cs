@@ -42,12 +42,12 @@ namespace Licao04.ViewModel
             _client = new AzureClient();
         }
 
-        private async Task cleanLocalData()
+        private async void cleanLocalData()
         {
             await _client.CleanData();
         }
 
-        private void generateContacts()
+        private async void generateContacts()
         {
             if (IsBusy)
                 return;
@@ -62,7 +62,7 @@ namespace Licao04.ViewModel
             for (int i = 0; i < 10; i++)
             {
                 var contact = new Contact() { Name = $"{names[rdn.Next(0, 12)]} {lastNames[rdn.Next(0, 8)]}" };
-                _client.AddContact(contact);
+                await _client.AddContact(contact);
             }
 
             IsBusy = false;

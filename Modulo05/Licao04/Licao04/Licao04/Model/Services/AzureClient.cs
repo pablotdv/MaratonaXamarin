@@ -15,7 +15,7 @@ public class AzureClient
 {
     private IMobileServiceClient _client;
     private IMobileServiceSyncTable<Contact> _table;
-    private const string serviceUri = "http://{app}.azurewebsites.net/";
+    private const string serviceUri = "http://xamarinbrasil.azurewebsites.net/";
     const string dbPath = "contactDb";
 
     public AzureClient()
@@ -44,7 +44,7 @@ public class AzureClient
         }
     }
 
-    public async void AddContact(Contact contact)
+    public async Task AddContact(Contact contact)
     {
         await _table.InsertAsync(contact);
     }

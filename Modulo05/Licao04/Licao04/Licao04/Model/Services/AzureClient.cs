@@ -11,64 +11,64 @@ using System.Threading.Tasks;
 
 namespace Licao04.Model.Services
 {
-    public class AzureClient
+public class AzureClient
+{
+    private IMobileServiceClient _client;
+    private IMobileServiceSyncTable<Contact> _table;
+    private const string serviceUri = "http://{app}.azurewebsites.net/";
+    const string dbPath = "contactDb";
+
+    public AzureClient()
     {
-        private IMobileServiceClient _client;
-        private IMobileServiceSyncTable<Contact> _table;
-        private const string serviceUri = "http://xamarinbrasil.azurewebsites.net/";
-        const string dbPath = "contactDb";
+        _client = new MobileServiceClient(serviceUri);
 
-        public AzureClient()
+        var store = new MobileServiceSQLiteStore(dbPath);
+        store.DefineTable<Contact>();
+        _client.SyncContext.InitializeAsync(store);
+
+        _table = _client.GetSyncTable<Contact>();
+    }
+
+    public async Task<IEnumerable<Contact>> GetContacts()
+    {
+        var empty = new Contact[0];
+        try
         {
-            _client = new MobileServiceClient(serviceUri);
-
-            var store = new MobileServiceSQLiteStore(dbPath);
-            store.DefineTable<Contact>();
-            _client.SyncContext.InitializeAsync(store);
-
-            _table = _client.GetSyncTable<Contact>();
+            if (Plugin.Connectivity.CrossConnectivity.Current.IsConnected)
+                await SyncAsync();
+            return await _table.ToEnumerableAsync();
         }
-
-        public async Task<IEnumerable<Contact>> GetContacts()
+        catch (Exception)
         {
-            var empty = new Contact[0];
-            try
-            {
-                if (Plugin.Connectivity.CrossConnectivity.Current.IsConnected)
-                    await SyncAsync();
-                return await _table.ToEnumerableAsync();
-            }
-            catch (Exception)
-            {
-                return empty;
-            }
-        }
-
-        public async void AddContact(Contact contact)
-        {
-            await _table.InsertAsync(contact);
-        }
-
-        public async Task SyncAsync()
-        {
-            ReadOnlyCollection<MobileServiceTableOperationError> syncErrors = null;
-
-            try
-            {
-                await _client.SyncContext.PushAsync();
-
-                await _table.PullAsync("allContacts", _table.CreateQuery());
-            }
-            catch (MobileServicePushFailedException pushEx)
-            {
-                if (pushEx.PushResult != null)
-                    syncErrors = pushEx.PushResult.Errors;
-            }
-        }
-
-        public async Task CleanData ()
-        {
-            await _table.PurgeAsync("allContacts", _table.CreateQuery(), new System.Threading.CancellationToken());
+            return empty;
         }
     }
+
+    public async void AddContact(Contact contact)
+    {
+        await _table.InsertAsync(contact);
+    }
+
+    public async Task SyncAsync()
+    {
+        ReadOnlyCollection<MobileServiceTableOperationError> syncErrors = null;
+
+        try
+        {
+            await _client.SyncContext.PushAsync();
+
+            await _table.PullAsync("allContacts", _table.CreateQuery());
+        }
+        catch (MobileServicePushFailedException pushEx)
+        {
+            if (pushEx.PushResult != null)
+                syncErrors = pushEx.PushResult.Errors;
+        }
+    }
+
+    public async Task CleanData ()
+    {
+        await _table.PurgeAsync("allContacts", _table.CreateQuery(), new System.Threading.CancellationToken());
+    }
+}
 }

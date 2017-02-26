@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab05.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Lab05
         {
             InitializeComponent();
 
-            MainPage = new Lab05.MainPage();
+            MainPage = new NavigationPage(new CatsPage());
         }
 
         protected override void OnStart()

@@ -13,7 +13,8 @@ namespace Lab05.Models
         {
             List<Cat> cats;
 
-            var URLWebAPI = "http://demos.ticapacitacion.com/cats";
+            var URLWebAPI = "http://demos.ticapacitacion.com/cats";
+
             using (var client = new HttpClient())
             {
                 var json = await client.GetStringAsync(URLWebAPI);

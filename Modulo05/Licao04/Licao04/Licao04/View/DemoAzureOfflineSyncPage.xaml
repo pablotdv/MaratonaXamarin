@@ -15,7 +15,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Name}"
-                          Detail="{Binding Id}"/>
+                          Detail="{Binding CreatedAt}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -14,6 +14,9 @@ namespace Licao04.Model.Entities
         [JsonProperty("Id")]
         public string Id { get; set; }
 
+        [JsonProperty("createdAt")]
+        public DateTime CreatedAt { get; set; }
+
         [JsonProperty("Name")]
         public string Name { get; set; }
 
